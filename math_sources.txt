@@ -1,0 +1,34 @@
+Maths for DSA and CP
+Video : https://www.youtube.com/watch?v=BD0PiKn5-3k
+
+
+
+AP (Foundations): 
+https://ncert.nic.in/textbook/pdf/jemh105.pdf
+
+Sequence and Series:
+https://ncert.nic.in/textbook/pdf/kemh108.pdf
+
+Solving Equations:
+https://ncert.nic.in/textbook/pdf/jemh103.pdf
+
+Basic Geometry:
+https://ncert.nic.in/textbook/pdf/hemh109.pdf
+
+Modulo :
+https://brilliant.org/wiki/modular-arithmetic/
+https://usaco.guide/gold/modular?lang=cpp
+
+Combinatorics:
+https://ncert.nic.in/textbook/pdf/kemh106.pdf
+https://usaco.guide/gold/combo?lang=cpp
+
+Number Theory:
+Focus on these - 
+GCD and LCM
+Fractions
+Prime Check
+Factorizing and Finding Divisors
+Sieve for Prime
+SPF for Factorization.
+https://usaco.guide/gold/divisibility?lang=cpp

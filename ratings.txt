@@ -1,0 +1,40 @@
+0-1000 - implementation, maths and greedy, constructive, bruteforce, sorting, strigs, number theory - Maths and greedy more important here 
+1000-1300 - same as above but more maths and STL more important, constructive Algos
+1300-1600 - DP, Binary search, STL , segment trees, fenwick trees, Number theory
+1600-1900 - 
+1900- 2100 - greedy , dp, maths
+
+
+extensions: carrot for rating, CF analytics for the analysis.
+
+
+1. Solve Problems at Your Level
+ • Daily Practice: I solved 5-10 problems each day that matched my rating.
+ • Smart Selection: I sorted the problems by the number of accepts and started solving them. (In the video, you see that alireza_kaviani also mentions that he has done the same thing)
+
+2. Focus on Essential Topics
+ • Learn Just the Basics: I concentrated on fundamental algorithms and data structures before moving to advanced topics.
+ • Avoid Unnecessary Complexity: I didn’t spend time on complex structures like persistent segment trees early on.
+
+3. Dynamic Programming (DP) is a key!
+ • Key Area: DP is crucial in competitive programming.
+ • Regular Practice: I included DP problems in my daily routine to build strong problem-solving skills.
+
+4. Use Topic Streams (Suggestion for you)
+ • Topic Stream: I didn't have this option, but you guys can watch the topic stream I prepared for you to learn every algorithm necessary for you.
+ • You. can watch the free topic streams in this playlist:
+   • (Almost never on) Fridays Topic Streams  
+
+5. Balance Persistence and Flexibility
+ • Think as Long as You Have Ideas: I gave myself time to solve problems on my own.
+ • Seek Help When Stuck: If I couldn’t progress, I consulted editorials for guidance.
+
+6. Learn by Doing
+ • Solve First, Learn Along the Way: I learned new algorithms as I encountered problems requiring them.
+ • Look at Others’ Solutions: Reviewing others’ code offers new perspectives and techniques.
+
+7. Participate in Contests
+ • Regular Participation: I joined all available contests to apply my knowledge under pressure.
+ • Upsolve: After contests, I solved problems I couldn’t during the event to improve.
+
+Improving on Codeforces is a long journey. It takes to time to get there. And you have to put time and effort on it. These are everything that I tell my students who are struggling to get to expert. If you want, I can talk about how to get to Grandmaster on Codeforcess too.
