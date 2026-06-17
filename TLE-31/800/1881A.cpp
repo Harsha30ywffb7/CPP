@@ -45,20 +45,36 @@ ll lcmll(ll a, ll b) {
 
 void println(vector<int> a){
     for(int x: a) cout<<x<<" ";
-        cout << endl;
-    
 }
 
-vector<int> fill(vector<int> a, int n){
-    for(int i=0; i<n; i++)
-    cin >> a[i];
-    return a;
-
-}
 
 void solve() {
     // Write solution here
+    int n, m;
+    cin >> n >> m;
+    string x, s;
+    cin >> x >> s;
+    int ans=0;
+    // chars not possible
+    if(x.find(s) != string::npos ) {
+        cout << ans << endl;
+        return;
+    }
 
+    while(x.length() <=100){
+        if (x.find(s) != string::npos) {
+            cout << ans << endl;
+            return;
+        }
+        ans++;
+        x +=x;
+    }
+
+   if (x.find(s) != string::npos) {
+        cout << ans << endl;
+    } else {
+        cout << -1 << endl; // Return -1 if s can never be formed
+    }
 }
 
 int main() {

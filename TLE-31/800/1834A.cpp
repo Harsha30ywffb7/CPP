@@ -58,7 +58,25 @@ vector<int> fill(vector<int> a, int n){
 
 void solve() {
     // Write solution here
-
+    int n;
+    cin >>n;
+    vector<int> vec(n);
+    vec= fill(vec, n);
+    int neg=0, pos=0,ans=0;
+    // always we need atleast n/2 pos's. if less check how far it is.
+    // pos can more than neg, neg always lesser than and even.
+    for(int x: vec){
+        if(x==-1) neg++;
+        else pos++;
+    }
+    // cout << " count of the neg and pos" << neg <<" "<< pos<< endl;
+    // covert min neg into pos and neg must even.
+    while(neg> pos || neg%2==1){
+        ans++;
+        pos++;
+        neg--;
+    }
+    cout << ans << endl;
 }
 
 int main() {

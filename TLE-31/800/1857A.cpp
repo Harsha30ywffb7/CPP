@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -58,6 +59,19 @@ vector<int> fill(vector<int> a, int n){
 
 void solve() {
     // Write solution here
+    int n,sum=0;
+    cin >> n;
+
+    for(int i=0; i<n; i++){
+        int num;
+        cin >> num;
+        sum += num;
+    }
+    if(sum%2 ==0){
+        cout << "Yes" << endl;
+    }else{
+        cout << "No" << endl;
+    }
 
 }
 
@@ -73,3 +87,5 @@ int main() {
 
     return 0;
 }
+
+

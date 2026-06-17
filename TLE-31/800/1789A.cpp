@@ -45,19 +45,26 @@ ll lcmll(ll a, ll b) {
 
 void println(vector<int> a){
     for(int x: a) cout<<x<<" ";
-        cout << endl;
-    
 }
 
-vector<int> fill(vector<int> a, int n){
+void fill(vector<int> a, int n){
+    int num;
     for(int i=0; i<n; i++)
     cin >> a[i];
-    return a;
-
 }
+
 
 void solve() {
     // Write solution here
+    int n;
+    vector<int> vec(n);
+    fill(vec, n);
+
+    println(vec);
+
+
+    // prefixes first, if its gcd is greater than its length it is not possible. need check all prefixes.
+
 
 }
 

@@ -58,6 +58,32 @@ vector<int> fill(vector<int> a, int n){
 
 void solve() {
     // Write solution here
+    int x, k;
+    cin >> x>> k;
+    int left=0, right=x;
+
+    while(left <= right){
+        if(left + right == x){
+            if(left ==0 && x%k != 0){
+                cout << 1 <<endl;
+                cout << right << endl;
+                return;
+            }else if(left!=0 && right !=0){
+               cout << 2 <<endl;
+                cout << left<<" "<< right << endl;
+                return;
+            }else{
+                left++;
+                right--;
+            }
+        }else{
+                if(left%k ==0 || right%k==0){
+                    left++;
+                    right--;
+                }
+            }
+    }
+
 
 }
 

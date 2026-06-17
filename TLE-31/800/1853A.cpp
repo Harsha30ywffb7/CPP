@@ -56,8 +56,22 @@ vector<int> fill(vector<int> a, int n){
 
 }
 
+
 void solve() {
     // Write solution here
+    ll n;
+    cin >>n;
+    vector<ll> vec(n);
+    for(ll i=0; i<n; i++) cin >> vec[i];
+    if(is_sorted(vec.begin(), vec.end())){
+        ll diff=INF;
+        for(ll i=0;i<n-1; i++){
+                diff = min(diff, abs(vec[i]-vec[i+1]));
+        }
+        cout << diff/2 +1 << endl;
+    }else{
+        cout <<0<<endl;
+    }
 
 }
 

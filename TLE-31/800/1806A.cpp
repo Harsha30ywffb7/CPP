@@ -49,16 +49,44 @@ void println(vector<int> a){
     
 }
 
-vector<int> fill(vector<int> a, int n){
-    for(int i=0; i<n; i++)
+vector<ll> fill(vector<ll> a, ll n){
+    for(ll i=0; i<n; i++)
     cin >> a[i];
     return a;
 
 }
 
+
 void solve() {
     // Write solution here
+    ll a, b, c,d;
+    cin >>a >>b>>c>>d;
 
+    // for y needed dia, for left using the adj left.
+    // while increase for y x also updates.
+
+    // no when b>d y never decreases at any point. even after reached correct x.
+
+    // must preserve all
+    if(b > d){
+        // never come down.
+        cout << -1 << endl;
+        return;
+    }
+
+    ll steps=0;
+    steps += d-b;
+    //(0,0)-> (5,5) -> (4,5)
+    a += d-b;
+    b = d;
+    // cout <<"a, b, c, d " << a << " "<< " "<<b<<" "<<c << " "<<d<<" "<<endl;
+    if(a<c){
+        cout << -1 << endl;
+        return;
+    }else{
+        steps += a-c;
+    }
+    cout << steps << endl;
 }
 
 int main() {

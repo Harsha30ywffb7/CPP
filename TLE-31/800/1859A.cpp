@@ -43,10 +43,9 @@ ll lcmll(ll a, ll b) {
     return a / gcdll(a, b) * b;
 }
 
-void println(vector<int> a){
-    for(int x: a) cout<<x<<" ";
+void println(vector<int> a, int n){
+    for(int i=0; i<n; i++) cout<<a[i]<<" ";
         cout << endl;
-    
 }
 
 vector<int> fill(vector<int> a, int n){
@@ -56,9 +55,30 @@ vector<int> fill(vector<int> a, int n){
 
 }
 
+
 void solve() {
     // Write solution here
-
+    int n;
+    cin >> n;
+    vector<int> vec(n);
+    vec = fill(vec,n);
+    sort(vec.begin(), vec.end());
+    if(vec[0] == vec[n-1]) {
+        cout << -1 << endl;
+        return;
+    }
+    int idx=0;
+    
+    while(vec[idx] == vec[idx+1]){
+        idx++;
+    }
+idx++;
+    cout << idx <<" "<< n-idx<< endl;
+    println(vec, idx);
+    for(int i=idx; i<n;i++){
+        cout<<vec[i]<<" ";
+    }
+    cout << endl;
 }
 
 int main() {

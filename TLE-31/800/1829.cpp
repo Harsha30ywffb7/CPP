@@ -58,6 +58,21 @@ vector<int> fill(vector<int> a, int n){
 
 void solve() {
     // Write solution here
+    int n;
+    cin >>n;
+    vector<int> vec(n);
+    vec= fill(vec, n);
+    int maxi=-1,cnt=0;
+    for(int x: vec){
+        if(x==0){
+            cnt++;
+        }else{
+            maxi = max(maxi, cnt);
+            cnt=0;
+        }
+    }
+    maxi = max(maxi, cnt);
+    cout << maxi << endl;
 
 }
 
