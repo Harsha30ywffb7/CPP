@@ -43,14 +43,14 @@ ll lcmll(ll a, ll b) {
     return a / gcdll(a, b) * b;
 }
 
-void println(vector<ll> a){
-    for(ll x: a) cout<<x<<" ";
+void println(vector<int> a){
+    for(int x: a) cout<<x<<" ";
         cout << endl;
     
 }
 
-vector<ll> fill(vector<ll> a, ll n){
-    for(ll i=0; i<n; i++)
+vector<int> fill(vector<int> a, int n){
+    for(int i=0; i<n; i++)
     cin >> a[i];
     return a;
 
@@ -58,7 +58,38 @@ vector<ll> fill(vector<ll> a, ll n){
 
 void solve() {
     // Write solution here
-    ll n;
+    int n, k;
+    cin >> n>>k;
+    string s;
+    cin >>s;
+
+    vector<int> vec(n*k);
+
+    vec = fill(vec, n*k);
+
+    int diff;
+
+    if((n*k )%2 ==0){
+        diff = n/2 -1;
+    }else{
+        diff = (n+1)/2;
+    }
+    int sum =0, len = n*k;
+    for(int i=0; i<k; i++){
+        sum += vec[len-(diff*k)-1];
+    }
+
+    cout << sum << endl;
+
+
+    // Test case 3
+// : [2,91,92,95],[4,36,53,82],[16,18,21,27]
+// . The medians are 91,36,18
+// . Their sum is 145
+
+// 2 4 16 18 21 27 36 53 82 91 92 95
+    
+
 }
 
 int main() {

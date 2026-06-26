@@ -1,6 +1,4 @@
-// You are given a permutation†
-//  𝑎
-//  of size 𝑛
+// You are given a permutation†  𝑎  of size 𝑛
 // . You can do the following operation
 
 // Select an index 𝑖
@@ -14,8 +12,7 @@
 // Determine whether it is possible to sort the permutation after a finite number of operations.
 
 // †
-//  A permutation is an array consisting of 𝑛
-//  distinct integers from 1
+//  A permutation is an array consisting of 𝑛  distinct integers from 1
 //  to 𝑛
 //  in arbitrary order. For example, [2,3,1,5,4]
 //  is a permutation, but [1,2,2]
@@ -81,5 +78,93 @@
 // .
 
 // In the third test case, it can be proven that it is impossible to sort the permutation.
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+// Typedefs
+using ll = long long;
+using ull = unsigned long long;
+using ld = long double;
+
+
+// Constants
+const int INF = 1e9;
+const ll LINF = 1e18;
+const int MOD = 1e9 + 7;
+
+// Macros
+
+#define fastio() ios::sync_with_stdio(false); cin.tie(nullptr)
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define pb push_back
+#define ff first
+#define ss second
+
+// Modular exponentiation
+ll binpow(ll a, ll b, ll mod = MOD) {
+    ll res = 1;
+    a %= mod;
+    while (b) {
+        if (b & 1) res = res * a % mod;
+        a = a * a % mod;
+        b >>= 1;
+    }
+    return res;
+}
+
+// GCD / LCM
+ll gcdll(ll a, ll b) {
+    return b ? gcdll(b, a % b) : a;
+}
+
+ll lcmll(ll a, ll b) {
+    return a / gcdll(a, b) * b;
+}
+
+void println(vector<int> a){
+    for(int x: a) cout<<x<<" ";
+        cout << endl;
+    
+}
+
+vector<int> fill(vector<int> a, int n){
+    for(int i=0; i<n; i++)
+    cin >> a[i];
+    return a;
+
+}
+
+void solve() {
+    // Write solution here
+    int n;
+    cin >>n;
+    vector<int> vec(n);
+    vec = fill(vec, n);
+    int first = vec[0];
+    sort(vec.begin(), vec.end());
+    if(first == vec[0]){
+        cout << "Yes" << endl;
+    }else{
+        cout << "No" << endl;
+    }
+
+}
+
+int main() {
+    fastio();
+
+    int tc = 1;
+    cin >> tc;
+
+    while (tc--) {
+        solve();
+    }
+
+    return 0;
+}
 
 

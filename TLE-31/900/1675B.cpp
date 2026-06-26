@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -43,8 +44,8 @@ ll lcmll(ll a, ll b) {
     return a / gcdll(a, b) * b;
 }
 
-void println(vector<ll> a){
-    for(ll x: a) cout<<x<<" ";
+void println(vector<int> a){
+    for(int x: a) cout<<x<<" ";
         cout << endl;
     
 }
@@ -59,6 +60,25 @@ vector<ll> fill(vector<ll> a, ll n){
 void solve() {
     // Write solution here
     ll n;
+    cin >>n;
+    vector<ll> vec(n);
+    vec = fill(vec, n);
+    long cnt=0, i=0;
+    for(i=n-2; i>=0; i--){
+        while(vec[i] >= vec[i+1]){
+            vec[i] /= 2;
+            cnt++;
+            if(vec[i]==0){
+                break;
+            }
+        }
+        if(vec[i] == 0 && vec[i+1] ==0){
+            cout << -1 << endl;
+            return;
+        } 
+    }
+    cout << cnt << endl;
+
 }
 
 int main() {

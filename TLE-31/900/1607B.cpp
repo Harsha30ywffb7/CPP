@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -43,8 +44,8 @@ ll lcmll(ll a, ll b) {
     return a / gcdll(a, b) * b;
 }
 
-void println(vector<ll> a){
-    for(ll x: a) cout<<x<<" ";
+void println(vector<int> a){
+    for(int x: a) cout<<x<<" ";
         cout << endl;
     
 }
@@ -58,8 +59,42 @@ vector<ll> fill(vector<ll> a, ll n){
 
 void solve() {
     // Write solution here
-    ll n;
+    ll n,d;
+    cin >> n >>d;
+    ll ans =0;
+
+    // odd : +1 -2 -3 +4 +5 -6 -7 +8 +9 = odd = {1->(n/4)* 4 +1, 2-> -1, 3-> (n/4)* -4,4->0 }
+// even: -1 +2 +3 -4 -5 +6 +7 ==> odd ={1-> -(n/4 )* 4-1, 2-> +1,  }
+// -97 98 99 = 110
+// 10 99 => 96
+
+    ll num = d%4;
+    int flag = n&1 ? 1 : -1;
+    ll diff;
+    if(num==1){
+        diff = (d/4)*4 +1;
+    }else if(num==2){
+        diff = -1;
+    }else if(num ==3){
+       diff = (d-2) - (d-1 + d);
+    }else{
+        diff= 0;
+    }
+    cout << n + flag*diff << endl;
 }
+
+// -1
+// 1
+// 11
+// 110
+// 190
+// 9012345679
+// -87611785637
+// 1
+// 0
+
+
+
 
 int main() {
     fastio();
@@ -70,6 +105,5 @@ int main() {
     while (tc--) {
         solve();
     }
-
     return 0;
 }
