@@ -1,0 +1,47 @@
+1. Number theory
+    - Modular arthimetic
+    - Basic knowledge of primes, multiples, Divisors
+    - Bitwise Operations
+    - Euclidean algorithm
+    - Sieve of eratoshenes
+    - Binary Modular Exponentiation
+    - Combinatorics
+
+2. Binary and Ternary Search
+    - General Binary Search
+    - Monotonic Functions (Understanding and proving)
+    - C++ STL Functions
+    - Binary Searching on Answer
+    - Convex Functions
+    - Ternary Search(Basics)
+
+3. Greedy
+    - Standard Greedy Problems
+    - Learning to prove your solution (optional: exchange arguments)
+    - Problems on Searching and sorting section of cses problem set(First 50%)
+
+4. Dynamic programming
+    - Standard Dp Problems
+    - Problems from Dp section of cses problemset
+    - Basics of DP with Bitmasking
+    - Basics of DP on Trees
+    - No need iterative dp at <1600 rating
+    -- Galen Colins
+
+5. Trees (>1400)
+    - Basic properties
+    - DFS
+    - Binary Lifting
+    - Findind LCA in LogN
+    - Trees section of CSES problemset
+    -- Galen Colins
+
+6. Graphs
+    - DFS, BFS
+    - connected components
+    - Directed Graphs Basics
+    - 1 minimum spanning trees algorithm
+    - disjoint set union Basics
+    -- Galen Colins
+    -- William Fiset's Graph Playlist
+    -- CSES problemset

@@ -60,6 +60,21 @@ void solve() {
     // Write solution here
     ll n;
     cin >> n;
+    vector<ll> vec(n);
+    vec = fill(vec, n);
+   
+    println(vec);
+    // if any freq is greater than >=2 of the entire all frequencies then that causes the last one.
+    ll sum =0;
+    if(n==1){
+        sum = vec[0];
+    }
+    if(is_sorted(vec.begin(), vec.end()) && ){
+
+    }
+    cout << sum << endl;
+
+
 }
 
 int main() {
@@ -67,6 +82,7 @@ int main() {
 
     int tc = 1;
     cin >> tc;
+    cout << "-------------- output lines printing -------------" <<endl;
 
     while (tc--) {
         solve();
@@ -74,3 +90,19 @@ int main() {
 
     return 0;
 }
+
+// ideas.
+/**
+to make the max, 
+atleast one between three same freq. upto 4 it takes. another one element for the maximise.
+count all freqs.
+
+atleast find how many distinct needed,
+
+// only consecutives must allow in the last only.
+if one no problem
+two also no problem
+three
+
+always max frequency first.
+*/

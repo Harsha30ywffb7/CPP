@@ -53,13 +53,33 @@ vector<ll> fill(vector<ll> a, ll n){
     for(ll i=0; i<n; i++)
     cin >> a[i];
     return a;
-
 }
 
 void solve() {
     // Write solution here
     ll n;
-    cin >> n;
+    vector<ll> vec(n);
+    vec = fill(n);
+
+    int mini=vec[0], maxi=vec[0], minInd=1, maxInd=n;
+    // need highest index min and least index max
+
+    for(int i=1; i<n; i++){
+        if(mini >= vec[i] ){
+            mini = vec[i];
+            minInd = i;
+        }else{
+            maxi = vec[i];
+            maxInd = i;
+        }
+    }
+    int ans;
+    if(maxInd > minInd){
+        ans = n-1-minInd + (maxInd-1);
+    }else{
+        ans = n-1-minInd + maxInd;
+    }
+    cout << ans << endl;
 }
 
 int main() {

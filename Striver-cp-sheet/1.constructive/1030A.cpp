@@ -60,6 +60,16 @@ void solve() {
     // Write solution here
     ll n;
     cin >> n;
+    vector<ll> vec(n);
+    vec = fill(vec, n);
+    for(ll x: vec){
+        if(x==1) {
+            cout << "easy" << endl;
+            return;
+        }
+    }
+
+    cout << "hard" << endl;
 }
 
 int main() {

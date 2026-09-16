@@ -60,6 +60,27 @@ void solve() {
     // Write solution here
     ll n;
     cin >> n;
+    vector<ll> presents(n);
+    presents = fill(presents, n);
+
+    vector<ll> receive(n,0);
+
+    for(int i=1; i<=n; i++){
+        for(j=0; j<n; j++){
+            if(presents[j]==1){
+                receive[i-1]= j;
+            }
+        }
+    }
+
+    println(receive);
+
+    // 4
+// 2 3 4 1
+
+
+
+
 }
 
 int main() {
