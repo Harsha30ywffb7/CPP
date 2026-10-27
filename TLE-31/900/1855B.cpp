@@ -1,78 +1,90 @@
-// Given a positive integer 𝑛
-// , find the maximum size of an interval [𝑙,𝑟]
-//  of positive integers such that, for every 𝑖
-//  in the interval (i.e., 𝑙≤𝑖≤𝑟
-// ), 𝑛
-//  is a multiple of 𝑖
-// .
+// C++ includes used for competitive programming
+#ifndef _GLIBCXX_NO_ASSERT
+#include <cassert>
+#endif
+#include <cctype>
+#include <cerrno>
+#include <cfloat>
+#include <ciso646>
+#include <climits>
+#include <clocale>
+#include <cmath>
+#include <csetjmp>
+#include <csignal>
+#include <cstdarg>
+#include <cstddef>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
 
-// Given two integers 𝑙≤𝑟
-// , the size of the interval [𝑙,𝑟]
-//  is 𝑟−𝑙+1
-//  (i.e., it coincides with the number of integers belonging to the interval).
+#if __cplusplus >= 201103L
+#include <ccomplex>
+#include <cfenv>
+#include <cinttypes>
+#include <cstdalign>
+#include <cstdbool>
+#include <cstdint>
+#include <ctgmath>
+#include <cwchar>
+#include <cwctype>
+#endif
 
-// Input
-// The first line contains a single integer 𝑡
-//  (1≤𝑡≤104
-// ) — the number of test cases.
+// C++ Containers & Algorithms
+#include <algorithm>
+#include <bitset>
+#include <complex>
+#include <deque>
+#include <exception>
+#include <fstream>
+#include <functional>
+#include <iomanip>
+#include <ios>
+#include <iosfwd>
+#include <iostream>
+#include <istream>
+#include <iterator>
+#include <limits>
+#include <list>
+#include <locale>
+#include <map>
+#include <memory>
+#include <new>
+#include <numeric>
+#include <ostream>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <stdexcept>
+#include <streambuf>
+#include <string>
+#include <typeinfo>
+#include <utility>
+#include <valarray>
+#include <vector>
 
-// The only line of the description of each test case contains one integer 𝑛
-//  (1≤𝑛≤1018
-// ).
-
-// Output
-// For each test case, print a single integer: the maximum size of a valid interval.
-
-// Example
-// InputCopy
-// 10
-// 1
-// 40
-// 990990
-// 4204474560
-// 169958913706572972
-// 365988220345828080
-// 387701719537826430
-// 620196883578129853
-// 864802341280805662
-// 1000000000000000000
-// OutputCopy
-// 1
-// 2
-// 3
-// 6
-// 4
-// 22
-// 3
-// 1
-// 2
-// 2
-// Note
-// In the first test case, a valid interval with maximum size is [1,1]
-//  (it's valid because 𝑛=1
-//  is a multiple of 1
-// ) and its size is 1
-// .
-
-// In the second test case, a valid interval with maximum size is [4,5]
-//  (it's valid because 𝑛=40
-//  is a multiple of 4
-//  and 5
-// ) and its size is 2
-// .
-
-// In the third test case, a valid interval with maximum size is [9,11]
-// .
-
-// In the fourth test case, a valid interval with maximum size is [8,13]
-// .
-
-// In the seventh test case, a valid interval with maximum size is [327869,327871]
-// .
-
-
-#include<bits/stdc++.h>
-
+#if __cplusplus >= 201103L
+#include <array>
+#include <atomic>
+#include <chrono>
+#include <condition_variable>
+#include <forward_list>
+#include <future>
+#include <initializer_list>
+#include <mutex>
+#include <random>
+#include <ratio>
+#include <regex>
+#include <scoped_allocator>
+#include <system_error>
+#include <thread>
+#include <tuple>
+#include <type_traits>
+#include <typeindex>
+#include <unordered_map>
+#include <unordered_set>
+#endif
 using namespace std;
 
 // Typedefs
@@ -132,12 +144,20 @@ vector<ll> fill(vector<ll> a, ll n){
 void solve() {
     // Write solution here
     ll n;
+    cin >> n;
+    for(ll i=sqrt(n); i>=0; i--){
+        if(n% i ==0){
+            cout << i-1+1 << endl;
+            return;
+        }
+    }
 }
 
 int main() {
     fastio();
 
-    int tc = 1;
+    // int tc = 1;
+    int tc;
     cin >> tc;
 
     while (tc--) {
